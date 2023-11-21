@@ -64,6 +64,50 @@
     .big-first-letter p::first-letter {
       font-size: 20px;
     }
+
+    p::selection {
+      background-color: brown;
+      color: aliceblue;
+    }
+
+    .experiment {
+      /* list-style-type: decimal (по умолчанию, можно не 
+ указывать) | decimal-leading-zero | armenian | 
+ georgian | lower-alpha | lower-greek | lower-latin |
+ lower-roman | upper-alpha | upper-latin | 
+ upper-roman */
+      list-style-type: none;
+      list-style-image: url(img/snake.svg);
+      /* Поставить маркер внутрь элемента (по умолчанию снаружи) */
+      list-style-position: inside;
+      /* list-style: list-style-type list-style-position 
+ list-style-image;
+ */
+    }
+
+    .experiment li {
+      height: 25px;
+    }
+
+    .experiment li:hover {
+      list-style-image: url(img/snake2.svg);
+    }
+    blockquote {
+      margin: 20px auto;
+      width: 400px;
+      text-align: center;
+      position: relative;
+    }
+    blockquote::before {
+      position: absolute;
+      left: -30px;
+      content: '<<';
+    }
+    blockquote::after {
+      content: '>>';
+      right: -30px;
+      position: absolute;
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -71,6 +115,10 @@
 <body>
 
   <h1>Для начала работы дома</h1>
+
+  <blockquote>
+    Ученье свет, а не ученье - тьма.
+  </blockquote>
 
   <p>
     ⊃ &sup; &#8835; &lt;p&gt; Текст параграфа &lt;/p&gt; <span class="dotted">HTML</span>
@@ -112,6 +160,57 @@
   <a href="https://disk.yandex.ru/d/LADtnZajP19xeQ">Яндекс.Диск</a>
   <a class="teal witeText" href="https://doka.guide/html/flow/">Поток документа</a>
   <a class="teal witeText" href="https://doka.guide/css/box-model/">Блочная модель</a>
+
+  <div>
+    <h2>Списки</h2>
+    <ul class="experiment">
+      <li class="li">gfdsgsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+      <li>gfdsgsdfsdfsdf</li>
+    </ul>
+  </div>
+
+  <dl>
+    <dt>Термин 1</dt>
+    <dd>Описание термина 1</dd>
+    <dt>Термин 2</dt>
+    <dd>Описание термина 2</dd>
+    <dt>Термин 3</dt>
+    <dd>Описание термина 3</dd>
+  </dl>
+
+  <ol>
+    <li>Площади
+      <ol type="a">
+        <li>Дворцовая площадь</li>
+        <li>Рыночная площадь</li>
+      </ol>
+    </li>
+    <li>Замки
+      <ul>
+        <li>Королевский замок</li>
+        <li>Вилянувский дворец</li>
+      </ul>
+    </li>
+    <li>Старе Място</li>
+    <li>Музеи
+      <ul>
+        <li>Исторический музей</li>
+        <li>Музей Войска Польского</li>
+        <li>Музей карикатуры</li>
+        <li>Музей Марии Кюри</li>
+        <li>Музей Шопена</li>
+        <li>Национальный музей</li>
+      </ul>
+    </li>
+    <li>Краковское предместье</li>
+  </ol>
+
+
 
   <div>
     <h1>Теги HTML</h1>
