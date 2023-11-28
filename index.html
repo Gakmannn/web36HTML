@@ -5,6 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <!-- favicon -->
+  <link rel="shortcut icon" href="img/snake.svg">
   <style>
     body {
       max-width: 1200px;
@@ -108,6 +110,41 @@
       right: -30px;
       position: absolute;
     }
+    .radius {border-radius: 20px;}
+    img:hover {
+      opacity: 0.5;
+    }
+    .shadow {box-shadow: -6px -6px 6px #a7a7a7;}
+    .around-shadow {
+      box-shadow: 0 0 8px 
+      rgba(0, 0, 0, 0.65);
+      }
+
+      /* background-color: red | #ff0000 | #f00 | 
+ rgb(255, 0, 0) | 
+ rgba(255, 0, 0, .7) | 
+ transparent (по умолчанию */
+ 
+      /* background-image: none (по умолчанию)| 
+ url(путь_к_изображению.расширение) */
+
+      /* backround-repeat: repeat (по умолчанию) | 
+ no-repeat | repeat-x | repeat-y | 
+ space | round  */
+
+      /* background-position: [left | center | right | % | px, 
+ em, pt и др.] 
+ [top | center | bottom | % | px,
+ em, pt и др. */
+
+      /* background-size: [ размер в px, pt, em, rem и др. | % |
+ auto ]{1,2} | cover | contain */
+
+      /* background-attachment fixed | scroll | local */
+
+      #rools {
+        background: url(img/original.jpg) 82% 26%/234px no-repeat, url(img/original.jpg) 28% 26%/234px no-repeat;
+      }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -228,23 +265,25 @@
         <img src="https://s.mediasalt.ru/cache/content/data/images/437/437165/original.jpg" alt="Горы"
           title="Фото с видом на горы">
         <!-- Картинка из файла -->
-        <img src="img/original.jpg" alt="Горы" title="Фото с видом на горы">
       </p>
       <hr>
       <h3 id="heading6">Заголовок 3-го уровня</h3>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
         exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
         minima!</p>
-    </div>
-
-    <div class="big-first-letter">
-      <h2>Блочные теги</h2>
-      <blockquote>Блочная цитата</blockquote>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
-        exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
+      </div>
+      
+      <div class="big-first-letter">
+        <h2>Блочные теги</h2>
+        <blockquote>Блочная цитата</blockquote>
+        <img src="img/original.jpg" class="radius shadow around-shadow" style="float: left; margin-right: 10px; width: 40%;" alt="Горы" title="Фото с видом на горы">
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
+          exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
         minima!</p>
-      <h3>Заголовок 3-го уровня</h3>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
+      <h3 style="clear: both;">Заголовок 3-го уровня</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
         exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
         minima!</p>
       <h4>Заголовок 4-го уровня</h4>
@@ -262,7 +301,7 @@
     </div>
   </div>
 
-  <div>
+  <div id="rools">
     <h1>Правила HTML</h1>
     <ol>
       <li>Все пробелы, табуляция и начало новых строк преобразуются в обычный пробел. Поэтому очень желательно
