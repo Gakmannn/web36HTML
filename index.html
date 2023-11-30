@@ -142,9 +142,45 @@
 
       /* background-attachment fixed | scroll | local */
 
+      /* background-origin: padding-box | border-box | content-box */
+
+      /* background-clip: padding-box | border-box (по умолчанию) | content-box | text */
+
+      /* background: background-image || 
+ background-position/background-size || 
+ background-repeat || 
+ background-attachment ||
+ background-origin || 
+ background-clip || 
+ background-color */
+
       #rools {
         background: url(img/original.jpg) 82% 26%/234px no-repeat, url(img/original.jpg) 28% 26%/234px no-repeat;
+        
       }
+
+    .box {
+      width: 120px;
+      height: 120px;
+      box-shadow:
+        inset 0 0 6px 0 #c000ff,
+        0 0 0 3px #c000ff,
+        0 0 6px 3px #c000ff,
+        0 0 0 7px #18191C,
+        0 0 0 10px #6e4aff,
+        0 0 6px 10px #6e4aff,
+        0 0 0 14px #18191C,
+        0 0 0 17px #c000ff,
+        0 0 6px 17px #c000ff;
+    }
+    .square {
+      display: inline-block;
+    }
+    .circle {
+      display: inline-block;
+      margin-left: 60px;
+      border-radius: 50%;
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -173,6 +209,9 @@
                   ))
                  ((
   </pre>
+
+  <div class="box square"></div>
+  <div class="box circle"></div>
 
   <ol>
     <li><a
