@@ -26,6 +26,8 @@
       background-color: aquamarine;
       margin-bottom: 3px;
       font-family: Lato, Verdana, Geneva, sans-serif;
+      transition: background-color 2s ease 2s, color 5s;
+      /* transition: all 0.8s ease 0s */
     }
     .catGalery a {
       display: inline-block;
@@ -43,7 +45,9 @@
     }
 
     a:hover {
+      color: #6e4aff;
       background-color: aqua;
+      transition: .5s;
     }
     .catGalery a:hover {
       background-color: transparent;
@@ -247,6 +251,14 @@
       writing-mode: vertical-lr;
       text-orientation: upright;
     }
+    .a1 {
+      visibility: visible;
+      transition: 1s;
+    }
+    .a1:hover {
+      visibility: hidden;
+      transition: 1s;
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -296,7 +308,7 @@
     <nav>menu</nav>
     <div class="flex">
       <div>
-        <aside>aside1</aside>
+        <aside class="a1">aside1</aside>
         <aside>aside2</aside>
       </div>
       <main>
@@ -336,6 +348,11 @@
   <a class="teal witeText" href="https://doka.guide/html/flow/" target="_blank">Поток документа</a>
   <a class="teal witeText" href="https://doka.guide/css/box-model/" target="_blank">Блочная модель</a>
   <a class="teal witeText" href="https://wp-kama.ru/id_5875/30-css-selektorov.html" target="_blank">CSS селекторы</a>
+  <a class="teal witeText" href="https://cubic-bezier.com/" target="_blank">cubic-bezier</a>
+  <a class="teal witeText" href="https://doka.guide/css/animation-timing-function" target="_blank">Функции времени</a>
+  <a class="teal witeText" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-style" target="_blank">3D трансформации</a>
+  <a class="teal witeText" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d" target="_blank">Кубик</a>
+  <a class="teal witeText" href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">z-index</a>
 
   <div>
     <h2>Списки</h2>
