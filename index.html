@@ -259,6 +259,55 @@
       visibility: hidden;
       transition: 1s;
     }
+    /* @keyframes name{
+      from  {
+        условие анимации
+      }
+      to  {
+        условие анимации
+      }
+    } */
+    pre {
+      position: fixed;
+      left: 10%;
+      top: 80%;
+      background-color: #db92af;
+      border-radius: 30%;
+      animation: play 5s ease-in-out infinite;
+      /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+    }
+    /* @keyframes play{
+      from  {
+        left: 10%;
+        top: 80%;
+      }
+      to  {
+        left: 10%;
+        top: 0%;
+      }
+    } */
+    @keyframes play{
+      0%  {
+        left: 10%;
+        top: 80%;
+      }
+      25%  {
+        left: 10%;
+        top: 0%;
+      }
+      50%  {
+        left: 80%;
+        top: 0%;
+      }
+      75%  {
+        left: 80%;
+        top: 80%;
+      }
+      100%  {
+        left: 10%;
+        top: 80%;
+      }
+    }
   </style>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -276,17 +325,115 @@
   </p>
 
   <pre aria-label="Изображение кота, собранное из текстовых символов.">
-              /\„„./\
-             (='•'=  )
-             (") „. (")
-              \,\„„/,/
-              │„„. „│
-              /„/„\„\
-             („) ''(„)
-                 ((
-                  ))
-                 ((
-  </pre>
+ /\„„./\
+(='•'=  )
+(") „. (")
+ \,\„„/,/
+ │„„. „│
+ /„/„\„\
+(„) ''(„)
+    ((
+    ))
+    ((</pre>
+
+  <style>
+    .watch {
+      width: 200px;
+      height: 200px;
+      margin: 20px auto;
+      border: 3px blue solid;
+      border-radius: 50%;
+      position: relative;
+    }
+    .watch div {
+      position: absolute;
+    }
+    .center {
+      width: 5px;
+      height: 5px;
+      top: calc(50% - (5px/2));
+      left: calc(50% - (5px/2));
+      background-color: #c000ff;
+      border-radius: 50%;
+    }
+    .seconds {
+      height: 80px;
+      width: 3px;
+      background-color: #d3242a;
+      left: calc(50% - (3px/2));
+      top: 20px;
+      transform-origin: bottom center;
+      animation: time 60s steps(60) infinite;
+    }
+    .minutes {
+      height: 60px;
+      width: 3px;
+      background-color: #2941c9;
+      left: calc(50% - (3px/2));
+      top: 40px;
+      transform-origin: bottom center;
+      animation: time 3600s linear infinite;
+    }
+    .hours {
+      height: 40px;
+      width: 3px;
+      background-color: #4a24d3;
+      left: calc(50% - (3px/2));
+      top: 60px;
+      transform-origin: bottom center;
+      animation: time 86400s linear infinite;
+    }
+    @keyframes time {
+      from {
+        transform: rotate(0);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+    .twelv {
+      top:10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .three {
+      right: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(90deg);
+    }
+    .six {
+      bottom:10px;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+    }
+    .nine {
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%) rotate(270deg);
+    }
+    .one {
+      transform: rotate(30deg) translateX(-50%);
+      transform-origin: 0px 90px;
+    }
+    .two {
+      transform: rotate(60deg) translateX(-50%);
+      transform-origin: 0px 90px;
+    }
+  </style>
+
+  <div class="watch">
+    <div class="seconds"></div>
+    <div class="minutes"></div>
+    <div class="hours"></div>
+    <div class="center"></div>
+    <div class="twelv">12</div>
+    <div class="twelv one">1</div>
+    <div class="twelv two">2</div>
+    <div class="three">3</div>
+    <div class="six">6</div>
+    <div class="nine">9</div>
+  </div>
+  
 
   <div class="catGalery">
     <h2 style="text-align: center;">Cats Galery</h2>
