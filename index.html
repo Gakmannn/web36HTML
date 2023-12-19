@@ -433,8 +433,81 @@
     <div class="six">6</div>
     <div class="nine">9</div>
   </div>
-  
 
+  <style>
+    /* внешние границы всей таблицы */
+    table {
+      border: 1px solid black;
+      border-collapse: collapse
+    } 
+    /* границы ячеек заголовков столбцов */
+    th {border: 1px solid red;}
+    /* границы ячеек основной части */
+    td {border: 1px solid blue;}
+    #uniq {
+      width: 30vw;
+      height: 20vh;
+      text-align: right;
+      vertical-align: bottom;
+    }
+    .col-1{
+      background-color: #ffcccc;
+    }
+    .col-2{
+      background-color: #ff9999;
+    }
+    .col-3{
+      background-color: #aa9999;
+    }
+
+  </style>
+
+  <table>
+    <caption>Заголовок таблицы</caption>
+    <colgroup>
+      <col span="1" class="col-1">
+      <col span="2" class="col-2">
+      <col span="2" class="col-3">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>sfs</th>
+        <th>fgfdg</th>
+        <th>fsgsdf</th>
+        <th>fsddsf</th>
+        <th>gfdsgfg</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th rowspan="2">jkldjfglk</th>
+        <td>fgkldjlkdf</td>
+        <td id="uniq">dfjlk</td>
+        <td>jlkdf</td>
+        <td>kljlkj</td>
+      </tr>
+      <tr>
+        <td colspan="2">lkjlkj</td>
+        <td>jlkjlkj</td>
+        <td>jl</td>
+      </tr>
+      <tr>
+        <th colspan="3">jlkjlk</th>
+        <td>wertwer</td>
+        <td>werwer</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <th>sfs</th>
+        <th>fgfdg</th>
+        <th>fsgsdf</th>
+        <th>fsddsf</th>
+        <th>gfdsgfg</th>
+      </tr>
+    </tfoot>
+  </table>
+  
   <div class="catGalery">
     <h2 style="text-align: center;">Cats Galery</h2>
     <hr style="border-color: #ffffff;">
@@ -501,7 +574,8 @@
   <a class="teal witeText" href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate3d" target="_blank">Кубик</a>
   <a class="teal witeText" href="https://developer.mozilla.org/en-US/docs/Web/CSS/z-index" target="_blank">z-index</a>
   <a class="teal witeText" href="https://disk.yandex.ru/d/k3SZF77ZuylnuA" target="_blank">Для Давида</a>
-
+  <a class="teal witeText" href="https://iksweb.ru/tools/generator-table-html" target="_blank">Генератор таблиц</a>
+  
   <div>
     <h2>Списки</h2>
     <ul class="experiment">
@@ -622,6 +696,8 @@
       <li>Комментарии в HTML предназначены для того, чтобы скрыть часть кода и записываются так:</li>
     </ol>
   </div>
+
+  
 
 </body>
 
