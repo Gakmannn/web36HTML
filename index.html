@@ -672,6 +672,72 @@
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
         exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
         minima!</p>
+      <style>
+        .menu a {
+          display: block;
+          border-radius: 0;
+          background: green;
+          color: white;
+          margin: 0;
+          text-transform: capitalize;
+          transition: 1s;
+        }
+        
+        .menu ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+          display: flex;
+          width: auto;
+          position: relative;
+          background: green;
+        }
+        .menu li {
+          position: relative;
+          padding: 1px;
+          background: rgb(5, 64, 5);
+        }
+        .menu a:hover {
+          background: rgb(5, 64, 5);
+          transition: 1s;
+        }
+        .menu li ul {
+          display: none;
+          position: absolute;
+        }
+        .menu li:hover>ul {
+          display: flex;
+          flex-direction: column;
+        }
+        .menu .inner {
+          left: 100%;
+          top: 0;
+        }
+        
+      </style>
+      <div class="menu">
+        <ul>
+          <li><a href="#">home</a></li>
+          <li>
+            <a href="#">category</a>
+            <ul style="width: 83.4px; top: 100%;">
+              <li><a style="border-top: none;" href="#">man</a></li>
+              <li>
+                <a href="#">wooman</a>
+                <ul class="inner">
+                  <li><a href="#">dress</a></li>
+                  <li><a href="#">pants</a></li>
+                  <li><a href="#">shoes</a></li>
+                </ul>
+              </li>
+              <li><a href="#">kids</a></li>
+
+            </ul>
+          </li>
+          <li><a href="#">about</a></li>
+          <li><a href="#">contact</a></li>
+        </ul>
+      </div>
       <h5>Заголовок 5-го уровня</h5>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore impedit, nesciunt numquam quasi nobis
         exercitationem aliquam ab ex? Repellat tempore alias saepe dolore magnam ipsum corrupti provident et tenetur
