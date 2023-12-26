@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container {
+      width: 300px;
+      height: 300px;
+      position: relative;
+      margin: 50px auto;
+    }
+    .container div {
+      position: absolute;
+      height: 10px;
+      width: 100%;
+      background: blueviolet;
+    }
+    .top {
+      top:0;
+      animation: fill 1s linear 1 both;
+    }
+    .left {
+      bottom: 0px;
+      transform: rotate(-90deg);
+      transform-origin: left bottom;
+      animation: fill 1s 3s linear 1 both;
+    }
+    .right {
+      right: 0;
+      transform: rotate(-90deg);
+      transform-origin: right 0;
+      animation: fill 1s 1s linear 1 both;
+    }
+    .bottom {
+      bottom:0;
+      right: 0;
+      animation: fill 1s 2s linear 1 both;
+      /* transform: rotate(-360deg); */
+    }
+    @keyframes fill {
+      from {
+        width: 0%;
+      }
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="top"></div>
+    <div class="right"></div>
+    <div class="bottom"></div>
+    <div class="left"></div>
+  </div>
+</body>
+</html>
