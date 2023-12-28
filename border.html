@@ -9,7 +9,8 @@
       width: 300px;
       height: 300px;
       position: relative;
-      margin: 50px auto;
+      margin: 100px auto;
+      transform: rotate(45deg);
     }
     .container div {
       position: absolute;
@@ -26,12 +27,14 @@
       transform: rotate(-90deg);
       transform-origin: left bottom;
       animation: fill 1s 3s linear 1 both;
+      z-index: -1;
     }
     .right {
       right: 0;
       transform: rotate(-90deg);
       transform-origin: right 0;
       animation: fill 1s 1s linear 1 both;
+      z-index: -1;
     }
     .bottom {
       bottom:0;
@@ -44,11 +47,15 @@
         width: 0%;
       }
     }
-
+    img {
+      position: absolute;
+      transform: rotate(-45deg);
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <img width="300px" src="img/14599548cf809a7a93f08f5671e4eb34.jpg" alt="cat">
     <div class="top"></div>
     <div class="right"></div>
     <div class="bottom"></div>

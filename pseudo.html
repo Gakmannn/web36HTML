@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <style>
+    *,
+    *::before,
+    *::after {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+    }
+
+    .elem {
+      width: 500px;
+      padding: 15px;
+      border: 2px solid #ccc;
+      margin: 20px;
+    }
+
+    .inline {
+      background: lightblue;
+      display: inline;
+      padding: 5px;
+    }
+
+    .inline-block {
+      background: lightcoral;
+      display: inline-block;
+      padding: 5px;
+    }
+
+    .block {
+      background: lightseagreen;
+      display: block;
+      padding: 5px;
+    }
+
+    .li {
+      display: list-item;
+    }
+
+    .inline-flex {
+      display: inline-flex;
+      background: lightcyan;
+      padding: 5px;
+    }
+
+    .selection::selection {
+      background: lightpink;
+    }
+
+    p::first-letter {
+      display: inline-block;
+      color: green;
+      font-size: 2em;
+      font-weight: bold;
+      border: 1px solid #1ebc1e;
+      padding: 2px 8px;
+      margin-right: 10px;
+      margin-top: 7px;
+      float: left;
+    }
+
+    p::first-line {
+      font-style: italic;
+    }
+
+    .bigBlock div {
+      margin: 10px;
+      padding: 10px;
+      background-color: lightgreen;
+    }
+
+    .bigBlock>div:first-of-type {
+      background-color: lightpink;
+    }
+
+    .bigBlock>div:last-of-type {
+      background-color: lavender;
+    }
+
+    .bigBlock>div:nth-of-type(even) {
+      background-color: firebrick;
+    }
+
+    /* :first-child {
+      background-color: #1ebc1e;
+    } */
+
+    ul :first-child {
+      background-color: #1ebc1e;
+    }
+    ul :nth-child(2) {
+      background-color: #1e5bbc;
+    }
+    ul :last-child {
+      background-color: #574d2e;
+      
+    }
+    ol :nth-last-child(7), ol :nth-last-child(15) {
+      background-color: #1e5bbc;
+    }
+    /* ol :nth-last-child(4n+5) {
+      background-color: #1e5bbc;
+      
+    } */
+
+    :only-child {
+      background-color: #45abf599;
+      padding: 3px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <a href="home.html">HOME</a>
+
+  <div class="elem">
+  </div>
+
+  <p>
+    <span class="inline">inl
+      <!-- 	В строчные элементы не допускается помещать блочные -->
+          <!-- <div class="block">block</div> -->
+      ine
+    </span>
+    <!-- inline-block ведёт себя снаружи как строчный элемент, а внутри, как блочный -->
+    <span class="inline-block">inline
+      <span class="block">block</span>
+      -block
+    </span>
+    <span class="inline-block">inline
+      <span class="block">block</span>
+      -block
+    </span>
+    <span class="inline-flex">
+      <span class="block">block</span>
+      <span class="block">block</span>
+    </span>
+  </p>
+
+  <div class="block">block</div>
+  <div class="block selection">Выдели меня</div>
+  
+  <ul>
+    <li>sdfsdfsdfs</li>
+    <div class="li">adfasdasdf</div>
+    <div class="li">adfasdasdf</div>
+  </ul>
+
+  <ol>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>df<b>df</b>sd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+    <li>dfdfsd</li>
+  </ol>
+
+  <p>
+    Lorem ipsum, dolor <i>s<b>i</b>d</i> amet consectetur adipisicing elit. Quod velit hic delectus dolore nobis sint architecto
+    voluptatibus adipisci nostrum aut, tempora obcaecati ad odio commodi aliquam quas ut fuga doloremque!
+    Nesciunt ipsam officia rerum, facilis nobis odit at excepturi nemo soluta officiis doloremque maxime, suscipit
+    magnam nulla quisquam ratione aspernatur! Qui esse non dignissimos eligendi maxime placeat nisi similique
+    repellendus?
+  </p>
+
+  <div class="bigBlock">
+    <h1>sdgdfhdfgdfg</h1>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+    <div>sfsdf
+      <div>ghjfghjgh</div>
+    </div>
+    <div>sfsdf</div>
+    <div>sfsdf</div>
+  </div>
+
+
+</body>
+
+</html>
