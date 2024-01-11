@@ -1,0 +1,47 @@
+blockquote {
+  display: none;
+}
+
+table {
+  display: none;
+}
+
+.layout .flex {
+  flex-direction: column;
+}
+
+.layout main {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.flex div {
+  width: 100%;
+}
+
+.layout .flex div aside:last-child {
+  margin-bottom: 0;
+}
+
+.layout .vertical {
+  writing-mode: initial;
+  text-orientation: initial;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.catGalery {
+  display: none;
+}
+
+.menu {
+  display: none;
+}
+
+br+img {
+  width: 100%;
+}
+
+.onMobile {
+  display: block;
+}
