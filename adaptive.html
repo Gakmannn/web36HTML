@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <style>
+    html {
+      font-size: 14px;
+    }
     .border {
       border: 1px solid black;
     }
@@ -23,6 +26,7 @@
     }
     .logo {
       padding: 10px 60px 10px 10px;
+      font-size: 20px;
     }
     nav {
       justify-content: space-between;
@@ -57,6 +61,7 @@
     }
     main {
       padding: 20px;
+      font-size: 1rem;
     }
     .wrap {
       flex-wrap: wrap;
@@ -66,6 +71,69 @@
       max-width: 1200px;
       margin: 0 auto;
     }
+    .hideOnDesktop {
+      display: none;
+    }
+    @media screen and (max-width:1024px) {
+      nav input {
+        display: none;
+      }
+      .hideOnDesktop {
+        display: inline;
+      }
+      header .flex {
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      aside {
+        width: 110px;
+      }
+      main {
+        padding: 0 10px;
+      }
+    }
+    @media screen and (max-width:768px) {
+      html {
+        font-size: 16px;
+      }
+      .logo {
+        padding: 5px 60px 5px 5px;
+      }
+      header .flex {
+        align-items: flex-start;
+      }
+      nav {
+        margin: 5px 0;
+      }
+      aside:first-of-type {
+        display: none;
+      }
+      aside:last-of-type {
+        margin-top: 0px;
+      }
+      .content {
+        flex-direction: column;
+      }
+      main {
+        padding: 0 5px;
+      }
+      aside {
+        padding: 5px;
+        width: auto;
+      }
+      .wrap {
+        flex-wrap: nowrap;
+        justify-content: center;
+      }
+      .content {
+        gap: 5px;
+      }
+    }
+    .element {
+      height: 100px;
+      background: gray;
+      width: clamp(200px, 50%, 500px);
+    }
   </style>
 </head>
 <body>
@@ -74,6 +142,7 @@
       <div class="border logo">
         <span>Logo</span>
       </div>
+      <input class="hideOnDesktop" type="text">
     </div>
     <nav class="border flex">
       <ul class="flex">
@@ -121,5 +190,7 @@
   <footer>
     <p>Copyright 2024</p>
   </footer>
+
+  <!-- <div class="element"></div> -->
 </body>
 </html>
