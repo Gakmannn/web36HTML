@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .border {
+      border: 1px solid black;
+    }
+    .box {
+      background-color: gray;
+    }
+    .small {
+      height: 50px;
+      width: 50px;
+    }
+    .big {
+      height: 300px;
+    }
+    .flex {
+      display: flex;
+    }
+    .logo {
+      padding: 10px 60px 10px 10px;
+    }
+    nav {
+      justify-content: space-between;
+      margin: 10px 0;
+      padding: 10px;
+    }
+    nav ul {
+      list-style: none;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+    nav a {
+      text-transform: capitalize;
+      color: black;
+      text-decoration: none;
+    }
+    .content {
+      gap: 10px;
+    }
+    aside {
+      padding: 10px;
+      width: 230px;
+    }
+    aside:last-of-type {
+      margin-top: 10px;
+    }
+    aside ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    main {
+      padding: 20px;
+    }
+    .wrap {
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    header, .content, footer {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="flex">
+      <div class="border logo">
+        <span>Logo</span>
+      </div>
+    </div>
+    <nav class="border flex">
+      <ul class="flex">
+        <li><a href="#">home</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">gallery</a></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+      <input type="text">
+    </nav>    
+  </header>
+  <div class="content flex">
+    <main class="border">
+      <h1>Lorem ipsum dolor</h1>
+      <div class="box big"></div>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio id non voluptas est ullam. Temporibus nostrum cumque, veritatis cum voluptas ullam eos veniam fuga, aperiam, saepe ex minima quas iste!</p>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio id non voluptas est ullam. Temporibus nostrum cumque, veritatis cum voluptas ullam eos veniam fuga, aperiam, saepe ex minima quas iste!</p>
+    </main>
+    <div>
+      <aside class="border">
+        <p>List</p>
+        <ul>
+          <li>item 1</li>
+          <li>item 2</li>
+          <li>item 3</li>
+          <li>item 4</li>
+          <li>item 5</li>
+        </ul>
+      </aside>
+      <aside class="border">
+        <p>Lorem</p>
+        <div class="flex wrap">
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+          <div class="box small"></div>
+        </div>
+      </aside>
+    </div>
+  </div>
+  <footer>
+    <p>Copyright 2024</p>
+  </footer>
+</body>
+</html>
