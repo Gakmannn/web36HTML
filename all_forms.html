@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style/style.css" rel="stylesheet" type="text/css" />
+  <style>
+    label {
+      display: block;
+    }
+
+    .inline {
+      display: inline;
+    }
+  </style>
+</head>
+
+<body>
+
+  <form id="form" method="get" action="/newdata.html">
+    <div>
+      <label for="name">Имя</label>
+      <input type="text" id="name" name="name" required placeholder="Петр Петрович" />
+      <div id="joke"></div>
+    </div>
+    <div>
+      <label for="mail">Почта</label>
+      <input type="email" id="mail" name="email" />
+    </div>
+    <div>
+      <label for="phone">Телефон</label>
+      <input type="tel" id="phone" pattern="+[0-9]{1}-[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" name="phone" required />
+    </div>
+    <div>
+      <label for="pass">Пароль</label>
+      <input type="password" id="pass" name="pass" />
+    </div>
+    <div>
+      <label for="pass2">Повторите пароль</label>
+      <input type="password" id="pass2" name="pass2" />
+    </div>
+    <div>
+      <input type="reset" id="reset" value="Очистить форму" />
+
+      <input type="submit" id="submit" value="Отправить" />
+    </div>
+  </form>
+  <form>
+    <div>
+      <label for="sex">Пол</label>
+      <select id="sex">
+        <option>man</option>
+        <option>woman</option>
+      </select>
+    </div>
+    <div>
+      <label for="button">Кнопка</label>
+      <input type="button" id="button" value="Имя кнопки">
+    </div>
+    <div>
+      <h4>Множественный выбор</h4>
+      <input type="checkbox" id="chb1" name="ChBoxGroup">
+      <label class="inline" for="chb1">Вариант 1</label>
+      <br>
+      <input type="checkbox" id="chb2" name="ChBoxGroup" checked>
+      <label class="inline" for="chb2">Вариант 2</label>
+      <br>
+      <input type="checkbox" id="chb3" name="ChBoxGroup">
+      <label class="inline" for="chb3">Вариант 3</label>
+    </div>
+    <div>
+      <input type="radio" id="r1" name="drone" value="val1" checked>
+      <label class="inline" for="r1">Вариант 1</label>
+      <input type="radio" id="r2" name="drone" value="val2" checked>
+      <label class="inline" for="r2">Вариант 2</label>
+      <input type="radio" id="r3" name="drone" value="val3" checked>
+      <label class="inline" for="r3">Вариант 3</label>
+    </div>
+    <div>
+      <label for="color">color</label>
+      <input type="color" id="color">
+    </div>
+    <div>
+      <label for="date">date</label>
+      <input type="date" id="date">
+    </div>
+    <div>
+      <label for="datetl">dateTimeLocal</label>
+      <input type="datetime-local" id="datetl">
+    </div>
+    <div>
+      <label for="month">month</label>
+      <input type="month" id="month">
+    </div>
+    <div>
+      <label for="week">week</label>
+      <input type="week" id="week">
+    </div>
+    <div>
+      <label for="time">time</label>
+      <input type="time" id="time">
+    </div>
+    <div>
+      <label for="number">number</label>
+      <input type="number" id="number">
+    </div>
+    <div>
+      <label for="range">range</label>
+      <input type="range" id="range" min="10" max="100" value="0" step="90">
+    </div>
+    <div>
+      <label for="file">file</label>
+      <input type="file" id="file">
+    </div>
+    <div>
+      <label for="text">text</label>
+      <input type="text" id="text">
+    </div>
+    <div>
+      <label for="ta">Много текста</label>
+      <textarea id="ta">
+			</textarea>
+    </div>
+    <div>
+      <label for="search">search</label>
+      <input type="search" id="search">
+    </div>
+
+  </form>
+
+
+  <script src="script/script.js"></script>
+</body>
+
+</html>
