@@ -1,0 +1,117 @@
+@import "template"; 
+
+$redChanel1: 205;
+$redChanel2: 59;
+$greenChanel1: 86;
+$greenChanel2: 169;
+$blueChanel1: 86;
+$blueChanel2: 59;
+
+$danger: rgb(205, 86, 86);
+$success: rgb(59, 169, 59);
+$page: 12;
+
+@function double($width) {
+    @return $width * 2;
+}
+
+.name {
+    width: double(3);
+    border: 1px solid gray;
+    display: block;
+    position: absolute;
+}
+
+p {
+    @if 1 + 1 == 2 { border: 1px solid;  }
+    @if 3 < 5      { border: 2px dotted; }
+    @if null       { border: 3px double;  }
+}
+
+@mixin zebra() {
+  @for $i from 1 through 10 {
+    .margin-#{$i} {
+      margin: 5px*$i;
+    }
+  }
+}
+* {
+  @include zebra();
+  text-align: center;
+}
+
+@mixin flexible () {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.centered-elements {
+  @include flexible ();
+  border: 1px solid gray;
+}
+
+@mixin border-radius($radius) {        // Префиксы для:
+    -webkit-border-radius: $radius;    // Chrome и Safari
+       -moz-border-radius: $radius;    // Firefox
+        -ms-border-radius: $radius;    // Internet Explorer
+         -o-border-radius: $radius;    // Opera
+            border-radius: $radius;    // Стандартный CSS
+  }
+// Пример использования миксина border-radius после его создания
+.box { @include border-radius(10px); }
+
+$sm: 500px;
+$md: 700px;
+$lg: 1000px;
+$xl: 1400px;
+$xxl: 1600px;
+
+@each $display in none, flex, block, inline, inline-flex, inline-grid, grid {
+  .d-#{$display} {
+    display: #{$display};
+  }
+}
+
+@each $size in sm, md, lg, xl, xxl {
+  @each $s in $sm, $md, $lg, $xl, $xxl {
+    @each $display in none, flex, block, inline, inline-flex, inline-grid, grid {
+      .d-#{$size}-#{$display} {
+        @media screen and (max-width:#{$s}){
+          display: #{$display};
+        } 
+      }
+    }
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  &:hover {
+            color: blue;
+        }
+  div {
+    padding: 10px;
+  }
+  >p {
+    font-size: 20px*2;
+    color: $danger;
+    &:before { content: "Страница #{ $page }!"; }
+  }
+}
+
+.button {
+  padding: 20px;
+  &_alert {
+    color: rgb(205+6, 86*3, 86+2);
+  }
+  &_success {
+    color: $success;
+  }
+  @media screen {
+    &{
+      font-size: 10px;
+    }
+  }
+}
